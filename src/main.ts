@@ -44,7 +44,16 @@ function attachListeners() {
  * Complete the function below to get the exchange rate from the API
  */
 
-async function getExchangeRateFromApi(dateCode: string, currencyCode: string) {}
+async function getExchangeRateFromApi(dateCode: string, currencyCode: string) {
+  let cur2 = fetch(
+    `https://currency-ror1.vercel.app/api/currency?rdate=${dateCode}&${currencyCode}=01`
+  )
+    .then((response) => response.json())
+    .then((data) => data);
+
+  console.log(cur2);
+}
+getExchangeRateFromApi(20211314, 01);
 
 /**
  * Complete the function below to get the data from the form,
@@ -79,3 +88,5 @@ currency_choice?.addEventListener("click", function () {
     currency_list.insertAdjacentHTML("afterbegin", html);
   }
 });
+
+//a. Complete the function getExchangeRateFromApi that receives a date-string (as described above) and a currency code (same) and calls the API to get the exchange rate of that currency on that day.

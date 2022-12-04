@@ -4,9 +4,45 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/smiley-icon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GRUnitech WebDev Exam nada</title>
+    <title>GRUnitech WebDev Exam</title>
   </head>
   <body>
     <script type="module" src="/src/main.ts"></script>
+    <h1>Currency Converter</h1>
+
+    <section class="currency-converter-form">
+      <form id="currency-converter-form" action="">
+        <div class="result">
+          Exchange Rate to ILS: <span id="exchangeResult">3.452</span>
+        </div>
+      </form>
+    </section>
+
+    <section class="currency-converter-table">
+      <table>
+        <thead>
+          <tr>
+            <th>date</th>
+            <th>
+              <label for="ice-cream-choice">Choose a currency:</label>
+              <input
+                list="currency-list"
+                id="currency_choice"
+                name="currency-choice"
+              />
+
+              <datalist id="currency-list">
+                <!-- <option value="Chocolate"></option>
+                <option value="Coconut"></option>
+                <option value="Mint"></option>
+                <option value="Strawberry"></option>
+                <option value="Vanilla"></option> -->
+              </datalist>
+            </th>
+            <th>exchange rate</th>
+          </tr>
+        </thead>
+      </table>
+    </section>
   </body>
 </html>
